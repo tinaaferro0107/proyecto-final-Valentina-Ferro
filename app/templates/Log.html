@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">You are login out</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+    
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %} 
+    <button type="submit">confirm</button>
+</form>
+
+{% endblock contenido %}

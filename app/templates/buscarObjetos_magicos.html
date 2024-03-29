@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block titulo %}
+<h1 class="mx-auto my-0 text-uppercase"> buscar Objetos_magicos </h1>
+{%  endblock titulo %}
+
+{% block contenido %}
+<form action = "{% url "encontrarObjetos_magicos"%}" method ="GET"> 
+    {% csrf_token %}
+    <p>Ingrese nombre a buscar: <input type="text" name="buscarObjetos_magicos" id="buscarObjetos_magicos">
+    <input type="submit" value="buscar">  
+</form>                 
+{%  endblock contenido %}

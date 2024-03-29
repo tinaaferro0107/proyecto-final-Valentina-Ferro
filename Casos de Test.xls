@@ -1,0 +1,10 @@
+No. Caso de Prueba	1		Versión:	Version 1	
+Escrito por	Valentina Ferro		Descripción:	Página enciclopedica de mitologia nordica	
+Probado por	Valentina Ferro		Probado en:	"Buenos Aires, Argentina"	
+					
+Prueba #	Fecha	Acción	Resultados esperados	Resultados actuales	Aprobado?
+1	3/29/2024	Iniciar Sesión	Dirige a la página de inicio	Dirige a la página de inicio	Si
+2	3/29/2024	Registro de Usuario	Dirige a la página de inicio	Dirige a la página de inicio	Si
+3	3/29/2024	Hacer click a los links (a href)	Todos van a una página o sección distinta	Todos van a una página o sección distinta	Si
+4	3/29/2024	Hacer click en los simbolo de borrar	Se elimina el elemento seleccionado	Se elimina el elemento seleccionado	Si
+5	3/29/2024	Hacer click en el perfil	Me permite cambiar la foto de perfil	Me permite cambiar la foto de perfil	Si

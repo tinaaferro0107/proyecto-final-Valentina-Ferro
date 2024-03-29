@@ -1,0 +1,69 @@
+{% extends "index.html" %}
+
+{% block titulo %}
+<h1 class="mx-auto my-0 text-uppercase"> historias </h1>
+{%  endblock titulo %}
+
+{% block contenido %}
+
+
+
+<table>
+    <tr>
+        <td width="200"><h2>historias</h2></td>
+        <td>
+        {% if  user.is_staff %}
+            <a
+            href="{% url 'mundosCreate' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa fa-plus fa-lg" tittle="crear"> </i>
+            </a> 
+        {% endif %}               
+            <a
+            href="{% url 'buscarHistorias' %}"
+            class="btn btn-primary btn-sm"
+            ><i class="fa-solid fa-magnifying-glass" tittle="buscar"> </i>
+            </a>
+        </td>
+    </tr>
+</table>    
+
+<table class="table">
+    <thread>
+        <tr>
+            <th>nombre</th>
+            <th>resumen</th>
+            <th>protagonistas</th>
+        {% if  user.is_staff %}        
+            <th>acciones</th> 
+        {% endif %}               
+        </tr>   
+    </thread>
+    <tbody>
+    {% for p in historias_list %}    
+        <tr>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.resumen }}</td>
+            <td>{{ p.protagonistas }}</td>
+        {% if  user.is_staff %}
+             <td>
+                <a
+                  href ="{% url 'historiasUpdate' p.id%}"
+                  class="btn btn-primary"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-edit fa-sm" tittle="Edit Record"></i>
+                </a>  
+                <a
+                  href ="{% url 'historiasDelete' p.id%}"
+                  class="btn btn-primary"
+                  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                  ><i class="fa fa-trash fa-sm" tittle="delete Record"></i>
+                </a>  
+            <td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+                    
+{%  endblock contenido %}    
